@@ -1,0 +1,24 @@
+{
+  "name": "@repo/db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:generate":"npx prisma generate",
+    "db:migrate":"npx prisma migrate dev --skip-generate",
+    "db:deploy":"npx prisma migrate delpoy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.5.0"
+  },
+  "exports":{
+    "./client":"./src/index.ts"
+  },
+  "prisma":{
+    "seed":"ts-node prisma/seed.ts"
+  }
+}

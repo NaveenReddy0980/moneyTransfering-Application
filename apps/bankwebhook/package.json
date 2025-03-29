@@ -1,0 +1,16 @@
+{
+  "name": "@repo/bankwebhook",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "@repo/db":"*"
+  }
+}
+
+ 
