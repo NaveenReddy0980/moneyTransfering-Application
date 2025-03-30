@@ -27,3 +27,14 @@ jobs:
 
         - name: Verifu Pushed Image
           run: docker pull naveenreddy0980/ci-cdweek-18:latest
+        - name: Deploy to Ec2
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{secrets.SSH_HOST}}
+            username: ${{secrets.SSH_USERNAME}}
+            key: ${{secrets.SSH_KEY}}
+            scripts:
+              sudo docker pull naveenreddy0980/ci-cdweek-18:latest
+              sudo docker stop web-app || true
+              sudo docker rm web-app || true
+              sudo docker run -d --name web-app -p 3005:3000 naveenreddy0980/ci-cdweek-18:latest
