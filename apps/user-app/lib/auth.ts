@@ -57,7 +57,7 @@ export const authOptions = {
     secret: process.env.JWT_SECRET || "secret",
     callbacks: {
         async redirect() {
-            return "/dashboard"
+            return "http://16.171.165.136:3005//dashboard"
         },
         // TODO: can u fix the type here? Using any is bad
         async session({ token, session }: any) {
