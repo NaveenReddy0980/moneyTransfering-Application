@@ -33,7 +33,7 @@ jobs:
             host: ${{secrets.SSH_HOST}}
             username: ${{secrets.SSH_USERNAME}}
             key: ${{secrets.SSH_KEY}}
-            scripts:
+            script: |
               sudo docker pull naveenreddy0980/ci-cdweek-18:latest
               sudo docker stop web-app || true
               sudo docker rm web-app || true
