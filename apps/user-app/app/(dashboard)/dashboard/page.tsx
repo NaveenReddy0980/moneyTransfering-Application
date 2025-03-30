@@ -1,6 +1,6 @@
 
 export default function Dashboard() {
     return <div>
-        Dashboard Page 
+        Dashboard Page Naveen 
     </div>
 }
